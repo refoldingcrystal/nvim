@@ -1,3 +1,4 @@
+vim.g.mapleader = " "
 local map = vim.keymap.set
 local opts = {
     noremap = true,
@@ -34,4 +35,7 @@ map({'n', 'v', 'i'}, '<A-4>', '<Cmd>BufferGoto 4<CR>', opts)
 map({'n', 'v', 'i'}, '<A-5>', '<Cmd>BufferGoto 5<CR>', opts)
 map({'n', 'v', 'i'}, '<A-0>', '<Cmd>BufferLast<CR>', opts)
 map({'n', 'v', 'i'}, '<A-c>', '<Cmd>BufferClose<CR>', opts)
+
+-- NvimTree
+map({'n'}, '<leader>n', '<Cmd>NvimTreeFocus<CR>')
 

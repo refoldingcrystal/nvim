@@ -13,13 +13,23 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
+        "nvim-tree/nvim-tree.lua",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons"
+        },
+        opts = {},
+    },
+    {
         "numToStr/Comment.nvim",
         opts = {
             toggler = { line = '<C-_>' },
             opleader = { line = '<C-_>' }
         }
     },
-    "windwp/nvim-autopairs",
+    {
+        "windwp/nvim-autopairs",
+        config = true,
+    },
     { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false },
     {
         "saghen/blink.cmp",

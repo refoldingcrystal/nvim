@@ -3,6 +3,10 @@ local o = vim.opt
 o.completeopt = {'menu', 'menuone', 'noselect'}
 o.undofile = true
 
+-- Disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Indentation
 o.tabstop = 4
 o.softtabstop = 4
