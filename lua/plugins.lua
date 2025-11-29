@@ -14,6 +14,10 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {
         "numToStr/Comment.nvim",
+        opts = {
+            toggler = { line = '<C-_>' },
+            opleader = { line = '<C-_>' }
+        }
     },
     "windwp/nvim-autopairs",
     { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false },
