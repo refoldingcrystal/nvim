@@ -27,3 +27,5 @@ o.incsearch = true
 o.hlsearch = true
 o.ignorecase = true
 o.smartcase = true
+
+

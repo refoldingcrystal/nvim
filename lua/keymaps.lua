@@ -37,5 +37,5 @@ map({'n', 'v', 'i'}, '<A-0>', '<Cmd>BufferLast<CR>', opts)
 map({'n', 'v', 'i'}, '<A-c>', '<Cmd>BufferClose<CR>', opts)
 
 -- NvimTree
-map({'n'}, '<leader>n', '<Cmd>NvimTreeFocus<CR>')
+map({'n'}, '<C-n>', '<Cmd>NvimTreeToggle<CR>')
 
