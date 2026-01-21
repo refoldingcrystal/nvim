@@ -34,12 +34,4 @@ require('mini.completion').setup()
 require('mini.comment').setup()
 require('mini.cmdline').setup()
 
-vim.lsp.enable({ 'lua_ls', 'clangd', 'tinymist' })
-vim.lsp.config.clangd = {
-    init_options = {
-        cmd = {
-            "--fallback-style={BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: true}"
-        },
-    },
-}
-
+vim.lsp.enable({ 'lua_ls', 'clangd', 'tinymist', 'pyright' })
