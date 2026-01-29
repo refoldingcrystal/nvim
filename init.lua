@@ -1,6 +1,7 @@
+require('keybinds')
 require('nvimtree-close')
 require('options')
-require('keybinds')
+require('runner')
 
 vim.pack.add({
     'https://github.com/catppuccin/nvim',
@@ -24,6 +25,8 @@ require('mason').setup()
 require('nvim-tree').setup()
 require('autoclose').setup()
 require('lualine').setup()
+
+-- Indent blankline
 require('ibl').setup({
     scope = { enabled = false }
 })
@@ -34,4 +37,4 @@ require('mini.completion').setup()
 require('mini.comment').setup()
 require('mini.cmdline').setup()
 
-vim.lsp.enable({ 'lua_ls', 'clangd', 'tinymist', 'pyright' })
+vim.lsp.enable({ 'lua_ls', 'clangd', 'tinymist', 'pyright', 'jdtls' })

@@ -4,6 +4,9 @@ local opts = {
 }
 
 vim.g.mapleader = ' '
+
+vim.keymap.set("n", "<leader>r", ":lua Runner()<CR>", opts)
+
 vim.keymap.set({ "n", "i" }, "<A-Up>", "<Cmd>m .-2<CR><ESC>==", opts)
 vim.keymap.set({ "n", "i" }, "<A-Down>", "<Cmd>m .+1<CR><ESC>==", opts)
 
@@ -31,6 +34,15 @@ vim.keymap.set({ "n", "v", "i" }, "<A-4>", "<Cmd>BufferGoto 4<CR>", opts)
 vim.keymap.set({ "n", "v", "i" }, "<A-5>", "<Cmd>BufferGoto 5<CR>", opts)
 vim.keymap.set({ "n", "v", "i" }, "<A-0>", "<Cmd>BufferLast<CR>", opts)
 vim.keymap.set({ "n", "v", "i" }, "<A-x>", "<Cmd>BufferClose<CR>", opts)
+vim.keymap.set({ "n", "v", "i" }, "<leader>q",
+    function()
+        local wins = vim.api.nvim_tabpage_list_wins(0)
+        if #wins > 1 then
+            vim.cmd("BufferClose")
+            vim.cmd("q")
+        end
+    end
+)
 
 vim.keymap.set('n', '<leader>o', ':source<CR>')
 vim.keymap.set('n', '<leader>fm', vim.lsp.buf.format)
